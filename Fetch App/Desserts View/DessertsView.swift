@@ -15,9 +15,14 @@ struct DessertsView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: [.init()], alignment: .leading) {
                     ForEach(viewModel.desserts.meals, id: \.idMeal) { dessert in
-                        DessertPreviewView(dessert: dessert)
-                            .padding(.horizontal)
-                            .padding(.bottom, 8)
+                        NavigationLink {
+                            DessertDetailLoadingView(dessertId: dessert.idMeal, dataSource: MockDessertInfoDataSource()) // TODO: Use real data source
+                        } label: {
+                            DessertPreviewView(dessert: dessert)
+                                .foregroundStyle(Color.primary)
+                                .padding(.horizontal)
+                                .padding(.bottom, 8)
+                        }
                     }
                 }
             }

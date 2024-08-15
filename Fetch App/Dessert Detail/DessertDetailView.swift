@@ -16,5 +16,5 @@ struct DessertDetailView: View {
 }
 
 #Preview {
-    DessertDetailView(viewModel: .init(dessert: .init(), dataSource: MockDessertInfoDataSource()))
+    DessertDetailView(viewModel: .init(dessert: MockDessertInfoDataSource.mockDessert(), dataSource: MockDessertInfoDataSource()))
 }

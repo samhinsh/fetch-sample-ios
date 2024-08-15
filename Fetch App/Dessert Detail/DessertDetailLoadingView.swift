@@ -41,7 +41,7 @@ struct DessertDetailLoadingView: View {
     /// Load the underlying data powering the view.
     func load() {
         Task {
-            let result = await dataSource.fetchDessertInfo(dessertId: dessertId) // TODO: pass in Id
+            let result = await dataSource.fetchDessertInfo(dessertId: dessertId)
             switch result {
             case .success(let dessertInfo):
                 await MainActor.run {

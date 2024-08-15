@@ -9,8 +9,10 @@ import Foundation
 
 class DessertDetailViewModel: ObservableObject {
     let dataSource: DessertInfoDataSource
+    @Published var dessert: DessertInfo
     
-    init(dataSource: DessertInfoDataSource) {
+    init(dessert: DessertInfo, dataSource: DessertInfoDataSource) {
+        self.dessert = dessert
         self.dataSource = dataSource
     }
 }

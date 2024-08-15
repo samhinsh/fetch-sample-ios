@@ -8,7 +8,8 @@
 import Foundation
 
 struct MockDessertInfoDataSource: DessertInfoDataSource {
-    func fetchDessertInfo() async -> Result<DessertInfo, any Error> {
+    
+    func fetchDessertInfo(dessertId: String) async -> Result<DessertInfo, any Error> {
         return .success(.init())
     }
 }

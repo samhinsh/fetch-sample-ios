@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct DessertDetailView: View {
+    @StateObject var viewModel: DessertDetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Dessert Detail")
     }
 }
 
 #Preview {
-    DessertDetailView()
+    DessertDetailView(viewModel: .init(dessert: .init(), dataSource: MockDessertInfoDataSource()))
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DessertInfoDataSource {
-    func fetchDessertInfo() async -> Result<DessertInfo, Error>
+    func fetchDessertInfo(dessertId: String) async -> Result<DessertInfo, Error>
 }

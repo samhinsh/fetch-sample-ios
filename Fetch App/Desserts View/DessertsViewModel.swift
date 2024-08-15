@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class DessertsViewModel: ObservableObject {
+    let dataSource: DessertsDataSource
+    
+    init(dataSource: DessertsDataSource) {
+        self.dataSource = dataSource
+    }
+}

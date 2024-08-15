@@ -169,9 +169,9 @@
 			children = (
 				2291ED212C6E9C8800D1A91D /* DessertsView.swift */,
 				2291ED4F2C6E9D0B00D1A91D /* DessertsViewModel.swift */,
+				2291ED672C6E9D5B00D1A91D /* DessertPreview.swift */,
 				2291ED5F2C6E9D4500D1A91D /* DessertsDataSource.swift */,
 				2291ED632C6E9D4F00D1A91D /* MockDessertsDataSource.swift */,
-				2291ED672C6E9D5B00D1A91D /* DessertPreview.swift */,
 			);
 			path = "Desserts View";
 			sourceTree = "<group>";
@@ -181,9 +181,9 @@
 			children = (
 				2291ED492C6E9CC900D1A91D /* DessertDetailView.swift */,
 				2291ED532C6E9D1600D1A91D /* DessertDetailViewModel.swift */,
+				2291ED6B2C6E9D6300D1A91D /* DessertInfo.swift */,
 				2291ED572C6E9D2800D1A91D /* DessertInfoDataSource.swift */,
 				2291ED5B2C6E9D3B00D1A91D /* MockDessertInfoDataSource.swift */,
-				2291ED6B2C6E9D6300D1A91D /* DessertInfo.swift */,
 			);
 			path = "Dessert Detail";
 			sourceTree = "<group>";

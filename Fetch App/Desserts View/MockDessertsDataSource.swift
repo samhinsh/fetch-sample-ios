@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct MockDessertsDataSource: DessertsDataSource {
+    func fetchDesserts() async -> Result<DessertPreview, any Error> {
+        return .success(.init()) // TODO
+    }
+}

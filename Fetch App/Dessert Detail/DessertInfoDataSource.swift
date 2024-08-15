@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol DessertInfoDataSource {
+    func fetchDessertInfo() async -> Result<DessertInfo, Error>
+}

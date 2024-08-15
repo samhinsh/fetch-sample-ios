@@ -13,11 +13,15 @@ struct DessertsView: View {
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(viewModel.desserts.meals, id: \.idMeal) { dessert in
-                    DessertPreviewView(dessert: dessert)
-                        .padding()
+                LazyVGrid(columns: [.init()], alignment: .leading) {
+                    ForEach(viewModel.desserts.meals, id: \.idMeal) { dessert in
+                        DessertPreviewView(dessert: dessert)
+                            .padding(.horizontal)
+                            .padding(.bottom, 8)
+                    }
                 }
             }
+            .navigationTitle("Desserts")
         }
     }
 }

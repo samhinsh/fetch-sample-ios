@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct DessertsView: View {
+    @StateObject var viewModel: DessertsViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                ForEach(viewModel.desserts.meals, id: \.idMeal) { dessert in
+                    DessertPreviewView(dessert: dessert)
+                        .padding()
+                }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    DessertsView()
+    DessertsView(viewModel: .init(desserts: .init(meals: []), dataSource: MockDessertsDataSource()))
 }

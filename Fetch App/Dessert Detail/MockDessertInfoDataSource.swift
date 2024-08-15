@@ -10,6 +10,7 @@ import Foundation
 struct MockDessertInfoDataSource: DessertInfoDataSource {
     
     func fetchDessertInfo(dessertId: String) async -> Result<DessertInfo, any Error> {
+        try? await Task.sleep(nanoseconds: 1_000_000_000) // simulate latency
         return .success(.init())
     }
 }

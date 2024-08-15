@@ -10,5 +10,5 @@ import Foundation
 struct DessertPreview: Codable {
     let strMeal: String
     let strMealThumb: String
-    let idMeal: Int
+    let idMeal: String
 }

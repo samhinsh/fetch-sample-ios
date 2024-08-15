@@ -28,7 +28,7 @@ struct DessertDetailLoadingView: View {
         switch state {
         case .loading:
             ActivityIndicatorView()
-                .onAppear {
+                .task {
                     load()
                 }
         case .loaded(let dessert):
@@ -39,7 +39,7 @@ struct DessertDetailLoadingView: View {
     }
     
     /// Load the underlying data powering the view.
-    private func load() {
+    func load() {
         Task {
             let result = await dataSource.fetchDessertInfo(dessertId: dessertId) // TODO: pass in Id
             switch result {

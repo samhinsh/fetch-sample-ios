@@ -23,7 +23,8 @@ struct DessertInfo: Decodable {
     let creativeCommonsConfirmed: String?
     let dateModified: String?
     
-    struct Ingredient {
+    struct Ingredient: Identifiable {
+        let id = UUID()
         let name: String
         let measure: String
     }

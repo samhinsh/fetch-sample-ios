@@ -70,6 +70,9 @@
 		2291ED942C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */; };
 		2291ED952C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */; };
 		2291ED962C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */; };
+		2291ED982C6EDCC900D1A91D /* fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED972C6EDCC900D1A91D /* fetchData.swift */; };
+		2291ED992C6EDCC900D1A91D /* fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED972C6EDCC900D1A91D /* fetchData.swift */; };
+		2291ED9A2C6EDCC900D1A91D /* fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED972C6EDCC900D1A91D /* fetchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,7 @@
 		2291ED8B2C6EB13400D1A91D /* DessertPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPreviewView.swift; sourceTree = "<group>"; };
 		2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertInfoAPIEndpoint.swift; sourceTree = "<group>"; };
 		2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertInfoContainer.swift; sourceTree = "<group>"; };
+		2291ED972C6EDCC900D1A91D /* fetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,7 @@
 			children = (
 				2291ED7D2C6EA6BB00D1A91D /* DessertListAPIEndpoint.swift */,
 				2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */,
+				2291ED972C6EDCC900D1A91D /* fetchData.swift */,
 				2291ED812C6EA76B00D1A91D /* FetchError.swift */,
 			);
 			path = api;
@@ -383,6 +388,7 @@
 			files = (
 				2291ED8C2C6EB13400D1A91D /* DessertPreviewView.swift in Sources */,
 				2291ED222C6E9C8800D1A91D /* DessertListView.swift in Sources */,
+				2291ED982C6EDCC900D1A91D /* fetchData.swift in Sources */,
 				2291ED202C6E9C8800D1A91D /* Fetch_AppApp.swift in Sources */,
 				2291ED542C6E9D1600D1A91D /* DessertDetailViewModel.swift in Sources */,
 				2291ED602C6E9D4500D1A91D /* DessertsDataSource.swift in Sources */,
@@ -410,6 +416,7 @@
 			files = (
 				2291ED8D2C6EB13400D1A91D /* DessertPreviewView.swift in Sources */,
 				2291ED592C6E9D2800D1A91D /* DessertInfoDataSource.swift in Sources */,
+				2291ED992C6EDCC900D1A91D /* fetchData.swift in Sources */,
 				2291ED652C6E9D4F00D1A91D /* MockDessertsDataSource.swift in Sources */,
 				2291ED552C6E9D1600D1A91D /* DessertDetailViewModel.swift in Sources */,
 				2291ED762C6EA12500D1A91D /* ActivityIndicatorView.swift in Sources */,
@@ -445,6 +452,7 @@
 				2291ED5A2C6E9D2800D1A91D /* DessertInfoDataSource.swift in Sources */,
 				2291ED4C2C6E9CC900D1A91D /* DessertDetailView.swift in Sources */,
 				2291ED662C6E9D4F00D1A91D /* MockDessertsDataSource.swift in Sources */,
+				2291ED9A2C6EDCC900D1A91D /* fetchData.swift in Sources */,
 				2291ED522C6E9D0B00D1A91D /* DessertListViewModel.swift in Sources */,
 				2291ED6A2C6E9D5B00D1A91D /* DessertPreview.swift in Sources */,
 				2291ED8A2C6EAE8200D1A91D /* DessertList.swift in Sources */,

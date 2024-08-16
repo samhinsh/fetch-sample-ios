@@ -14,16 +14,15 @@ struct DessertInfoAPIEndpoint: DessertInfoDataSource {
             return .failure(FetchError.some(message: "Invalid url"))
         }
         let request = URLRequest(url: url)
+        let result: Result<DessertInfoContainer, Error> = await fetchData(urlRequest: request)
         
-        do {
-            let (data, _) = try await URLSession.shared.data(for: request)
-            let container = try JSONDecoder().decode(DessertInfoContainer.self, from: data)
+        switch result {
+        case .success(let container):
             guard let info = container.meals.first else {
                 return .failure(FetchError.some(message: "Couldn't get data from meals object"))
             }
             return .success(info)
-        } catch let error {
-            print("API:: \(String(describing: error))")
+        case .failure(let error):
             return .failure(error)
         }
     }

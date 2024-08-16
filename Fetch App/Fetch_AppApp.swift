@@ -11,7 +11,8 @@ import SwiftUI
 struct Fetch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            DessertsLoadingView(dataSource: DessertsAPIEndpoint())
+            DessertsLoadingView(dataSource: DessertsAPIEndpoint(),
+                                dessertInfoDataSource: DessertInfoAPIEndpoint())
         }
     }
 }

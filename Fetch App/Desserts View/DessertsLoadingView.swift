@@ -10,9 +10,11 @@ import SwiftUI
 struct DessertsLoadingView: View {
     @SwiftUI.State var state: State = .loading
     let dataSource: DessertsDataSource
+    let dessertInfoDataSource: DessertInfoDataSource
     
-    init(dataSource: DessertsDataSource) {
+    init(dataSource: DessertsDataSource, dessertInfoDataSource: DessertInfoDataSource) {
         self.dataSource = dataSource
+        self.dessertInfoDataSource = dessertInfoDataSource
     }
     
     enum State {
@@ -29,7 +31,7 @@ struct DessertsLoadingView: View {
                     load()
                 }
         case .loaded(let dessertList):
-            DessertsView(viewModel: .init(desserts: dessertList, dataSource: dataSource))
+            DessertsView(viewModel: .init(desserts: dessertList, dataSource: dataSource), dessertInfoDataSource: dessertInfoDataSource)
         case .error:
             Color.clear // TODO: Show appropriate error message
         }
@@ -54,5 +56,5 @@ struct DessertsLoadingView: View {
 }
 
 #Preview {
-    DessertsLoadingView(dataSource: MockDessertsDataSource())
+    DessertsLoadingView(dataSource: MockDessertsDataSource(), dessertInfoDataSource: MockDessertInfoDataSource())
 }

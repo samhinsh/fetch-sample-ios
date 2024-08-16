@@ -29,7 +29,6 @@ struct DessertInfo: Decodable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case meals = "meals"
         case idMeal = "idMeal"
         case strMeal = "strMeal"
         case strDrinkAlternate = "strDrinkAlternate"
@@ -106,8 +105,9 @@ struct DessertInfo: Decodable {
     }
     
     init(from decoder: any Decoder) throws {
-        let outerContainer = try decoder.container(keyedBy: CodingKeys.self)
-        let container = try outerContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .meals)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+//        let container = try outerContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .meals)
         self.mealId = try container.decode(String.self, forKey: .idMeal)
         self.mealName = try container.decode(String.self, forKey: .strMeal)
         self.drinkAlternate = try container.decodeIfPresent(String.self, forKey: .strDrinkAlternate)
@@ -120,8 +120,8 @@ struct DessertInfo: Decodable {
         self.youtubeUrl = try container.decodeIfPresent(String.self, forKey: .strYoutube)
         
         // parse ingredients
-        let ingredientNamesContainer = try outerContainer.nestedContainer(keyedBy: IngredientNameKey.self, forKey: .meals)
-        let ingredientMeasuresContainer = try outerContainer.nestedContainer(keyedBy: IngredientMeasureKey.self, forKey: .meals)
+        let ingredientNamesContainer = try decoder.container(keyedBy: IngredientNameKey.self)
+        let ingredientMeasuresContainer = try decoder.container(keyedBy: IngredientMeasureKey.self)
         
         var ingredients = [Ingredient]()
         var ingredientCounter = 1
@@ -134,6 +134,7 @@ struct DessertInfo: Decodable {
                 break
             }
             
+            // capture ingredient if both name and measure exist consecutively with previous sets of ingredients in the JSON
             if let name = try? ingredientNamesContainer.decodeIfPresent(String.self, forKey: ingredientNameKey),
                let measure = try? ingredientMeasuresContainer.decodeIfPresent(String.self, forKey: ingredientMeasureKey) {
                 if !name.isEmpty && !measure.isEmpty {

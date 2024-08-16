@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DessertsView: View {
     @StateObject var viewModel: DessertsViewModel
+    let dessertInfoDataSource: DessertInfoDataSource
     
     var body: some View {
         NavigationStack {
@@ -16,7 +17,8 @@ struct DessertsView: View {
                 LazyVGrid(columns: [.init()], alignment: .leading) {
                     ForEach(viewModel.desserts.meals, id: \.idMeal) { dessert in
                         NavigationLink {
-                            DessertDetailLoadingView(dessertId: dessert.idMeal, dataSource: MockDessertInfoDataSource()) // TODO: Use real data source
+                            DessertDetailLoadingView(dessertId: dessert.idMeal, 
+                                                     dataSource: dessertInfoDataSource)
                         } label: {
                             DessertPreviewView(dessert: dessert)
                                 .foregroundStyle(Color.primary)
@@ -32,5 +34,5 @@ struct DessertsView: View {
 }
 
 #Preview {
-    DessertsView(viewModel: .init(desserts: .init(meals: []), dataSource: MockDessertsDataSource()))
+    DessertsView(viewModel: .init(desserts: .init(meals: []), dataSource: MockDessertsDataSource()), dessertInfoDataSource: MockDessertInfoDataSource())
 }

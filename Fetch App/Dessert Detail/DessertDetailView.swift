@@ -12,6 +12,7 @@ struct DessertDetailView: View {
     
     var body: some View {
         Text("Dessert Detail")
+            .navigationTitle(viewModel.dessert.mealName)
     }
 }
 

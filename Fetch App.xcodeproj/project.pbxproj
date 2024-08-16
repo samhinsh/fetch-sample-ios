@@ -64,6 +64,12 @@
 		2291ED8C2C6EB13400D1A91D /* DessertPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED8B2C6EB13400D1A91D /* DessertPreviewView.swift */; };
 		2291ED8D2C6EB13400D1A91D /* DessertPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED8B2C6EB13400D1A91D /* DessertPreviewView.swift */; };
 		2291ED8E2C6EB13400D1A91D /* DessertPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED8B2C6EB13400D1A91D /* DessertPreviewView.swift */; };
+		2291ED902C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */; };
+		2291ED912C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */; };
+		2291ED922C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */; };
+		2291ED942C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */; };
+		2291ED952C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */; };
+		2291ED962C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +116,8 @@
 		2291ED812C6EA76B00D1A91D /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
 		2291ED872C6EAE8100D1A91D /* DessertList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertList.swift; sourceTree = "<group>"; };
 		2291ED8B2C6EB13400D1A91D /* DessertPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPreviewView.swift; sourceTree = "<group>"; };
+		2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertInfoAPIEndpoint.swift; sourceTree = "<group>"; };
+		2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertInfoContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +226,7 @@
 				2291ED492C6E9CC900D1A91D /* DessertDetailView.swift */,
 				2291ED532C6E9D1600D1A91D /* DessertDetailViewModel.swift */,
 				2291ED6B2C6E9D6300D1A91D /* DessertInfo.swift */,
+				2291ED932C6ECE5100D1A91D /* DessertInfoContainer.swift */,
 				2291ED572C6E9D2800D1A91D /* DessertInfoDataSource.swift */,
 				2291ED5B2C6E9D3B00D1A91D /* MockDessertInfoDataSource.swift */,
 			);
@@ -236,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				2291ED7D2C6EA6BB00D1A91D /* DessertsAPIEndpoint.swift */,
+				2291ED8F2C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift */,
 				2291ED812C6EA76B00D1A91D /* FetchError.swift */,
 			);
 			path = api;
@@ -377,6 +387,7 @@
 				2291ED542C6E9D1600D1A91D /* DessertDetailViewModel.swift in Sources */,
 				2291ED602C6E9D4500D1A91D /* DessertsDataSource.swift in Sources */,
 				2291ED5C2C6E9D3B00D1A91D /* MockDessertInfoDataSource.swift in Sources */,
+				2291ED902C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift in Sources */,
 				2291ED582C6E9D2800D1A91D /* DessertInfoDataSource.swift in Sources */,
 				2291ED4A2C6E9CC900D1A91D /* DessertDetailView.swift in Sources */,
 				2291ED882C6EAE8100D1A91D /* DessertList.swift in Sources */,
@@ -384,6 +395,7 @@
 				2291ED502C6E9D0B00D1A91D /* DessertsViewModel.swift in Sources */,
 				2291ED682C6E9D5B00D1A91D /* DessertPreview.swift in Sources */,
 				2291ED792C6EA4C000D1A91D /* DessertsLoadingView.swift in Sources */,
+				2291ED942C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */,
 				2291ED6C2C6E9D6300D1A91D /* DessertInfo.swift in Sources */,
 				2291ED752C6EA12500D1A91D /* ActivityIndicatorView.swift in Sources */,
 				2291ED7E2C6EA6BB00D1A91D /* DessertsAPIEndpoint.swift in Sources */,
@@ -402,6 +414,7 @@
 				2291ED552C6E9D1600D1A91D /* DessertDetailViewModel.swift in Sources */,
 				2291ED762C6EA12500D1A91D /* ActivityIndicatorView.swift in Sources */,
 				2291ED612C6E9D4500D1A91D /* DessertsDataSource.swift in Sources */,
+				2291ED912C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift in Sources */,
 				2291ED852C6EAAF300D1A91D /* DessertsView.swift in Sources */,
 				2291ED6D2C6E9D6300D1A91D /* DessertInfo.swift in Sources */,
 				2291ED892C6EAE8100D1A91D /* DessertList.swift in Sources */,
@@ -409,6 +422,7 @@
 				2291ED7A2C6EA4C000D1A91D /* DessertsLoadingView.swift in Sources */,
 				2291ED5D2C6E9D3B00D1A91D /* MockDessertInfoDataSource.swift in Sources */,
 				2291ED4B2C6E9CC900D1A91D /* DessertDetailView.swift in Sources */,
+				2291ED952C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */,
 				2291ED7F2C6EA6BB00D1A91D /* DessertsAPIEndpoint.swift in Sources */,
 				2291ED692C6E9D5B00D1A91D /* DessertPreview.swift in Sources */,
 				2291ED832C6EA76B00D1A91D /* FetchError.swift in Sources */,
@@ -424,6 +438,7 @@
 				2291ED3B2C6E9C8D00D1A91D /* Fetch_AppUITests.swift in Sources */,
 				2291ED3D2C6E9C8D00D1A91D /* Fetch_AppUITestsLaunchTests.swift in Sources */,
 				2291ED562C6E9D1600D1A91D /* DessertDetailViewModel.swift in Sources */,
+				2291ED962C6ECE5100D1A91D /* DessertInfoContainer.swift in Sources */,
 				2291ED622C6E9D4500D1A91D /* DessertsDataSource.swift in Sources */,
 				2291ED5E2C6E9D3B00D1A91D /* MockDessertInfoDataSource.swift in Sources */,
 				2291ED8E2C6EB13400D1A91D /* DessertPreviewView.swift in Sources */,
@@ -437,6 +452,7 @@
 				2291ED862C6EAAF400D1A91D /* DessertsView.swift in Sources */,
 				2291ED6E2C6E9D6300D1A91D /* DessertInfo.swift in Sources */,
 				2291ED772C6EA12500D1A91D /* ActivityIndicatorView.swift in Sources */,
+				2291ED922C6ECB0C00D1A91D /* DesertInfoAPIEndpoint.swift in Sources */,
 				2291ED802C6EA6BB00D1A91D /* DessertsAPIEndpoint.swift in Sources */,
 				2291ED722C6EA05000D1A91D /* DessertDetailLoadingView.swift in Sources */,
 				2291ED842C6EA76B00D1A91D /* FetchError.swift in Sources */,

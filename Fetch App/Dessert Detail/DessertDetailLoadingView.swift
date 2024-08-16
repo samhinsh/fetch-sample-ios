@@ -39,16 +39,17 @@ struct DessertDetailLoadingView: View {
     }
     
     /// Load the underlying data powering the view.
-    func load() {
-        Task {
+    @discardableResult
+    func load() -> Task<(), Error> {
+        return Task {
             let result = await dataSource.fetchDessertInfo(dessertId: dessertId)
             switch result {
             case .success(let dessertInfo):
-                await MainActor.run {
+                return await MainActor.run {
                     self.state = .loaded(info: dessertInfo)
                 }
             case .failure:
-                await MainActor.run {
+                return await MainActor.run {
                     self.state = .error
                 }
             }

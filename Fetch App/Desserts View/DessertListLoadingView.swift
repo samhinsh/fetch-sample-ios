@@ -38,8 +38,9 @@ struct DessertListLoadingView: View {
     }
     
     /// Load the data for the view.
-    func load() {
-        Task {
+    @discardableResult
+    func load() -> Task<(), Error> {
+        return Task {
             let result = await dataSource.fetchDesserts()
             switch result {
             case .success(let desserts):

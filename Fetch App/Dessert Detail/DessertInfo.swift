@@ -108,7 +108,6 @@ struct DessertInfo: Decodable {
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-//        let container = try outerContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .meals)
         self.mealId = try container.decode(String.self, forKey: .idMeal)
         self.mealName = try container.decode(String.self, forKey: .strMeal)
         self.drinkAlternate = try container.decodeIfPresent(String.self, forKey: .strDrinkAlternate)
@@ -119,6 +118,10 @@ struct DessertInfo: Decodable {
         let tagsString = try container.decodeIfPresent(String.self, forKey: .strTags)
         self.tags = tagsString?.components(separatedBy: ",")
         self.youtubeUrl = try container.decodeIfPresent(String.self, forKey: .strYoutube)
+        self.source = try container.decodeIfPresent(String.self, forKey: .strSource)
+        self.imageSource = try container.decodeIfPresent(String.self, forKey: .strImageSource)
+        self.creativeCommonsConfirmed = try container.decodeIfPresent(String.self, forKey: .strCreativeCommonsConfirmed)
+        self.dateModified = try container.decodeIfPresent(String.self, forKey: .dateModified)
         
         // parse ingredients
         let ingredientNamesContainer = try decoder.container(keyedBy: IngredientNameKey.self)
@@ -128,8 +131,8 @@ struct DessertInfo: Decodable {
         var ingredientCounter = 1
         
         while true {
-            // attempt to parse ingredient str and measure str for the given # while these keys exist
-            // in their respective containers
+            // attempt to parse ingredient name and measurement while
+            // the corresponding keys for the ingredient no. exist in the container
             guard let ingredientNameKey = IngredientNameKey(intValue: ingredientCounter),
                     let ingredientMeasureKey = IngredientMeasureKey(intValue: ingredientCounter) else {
                 break
@@ -152,10 +155,5 @@ struct DessertInfo: Decodable {
         } else {
             self.ingredients = nil
         }
-        
-        self.source = try container.decodeIfPresent(String.self, forKey: .strSource)
-        self.imageSource = try container.decodeIfPresent(String.self, forKey: .strImageSource)
-        self.creativeCommonsConfirmed = try container.decodeIfPresent(String.self, forKey: .strCreativeCommonsConfirmed)
-        self.dateModified = try container.decodeIfPresent(String.self, forKey: .dateModified)
     }
 }

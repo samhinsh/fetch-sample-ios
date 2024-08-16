@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DessertsLoadingView: View {
+struct DessertListLoadingView: View {
     @SwiftUI.State var state: State = .loading
     let dataSource: DessertsDataSource
     let dessertInfoDataSource: DessertInfoDataSource
@@ -31,7 +31,7 @@ struct DessertsLoadingView: View {
                     load()
                 }
         case .loaded(let dessertList):
-            DessertsView(viewModel: .init(desserts: dessertList, dataSource: dataSource), dessertInfoDataSource: dessertInfoDataSource)
+            DessertListView(viewModel: .init(desserts: dessertList, dataSource: dataSource), dessertInfoDataSource: dessertInfoDataSource)
         case .error:
             Color.clear // TODO: Show appropriate error message
         }
@@ -56,5 +56,5 @@ struct DessertsLoadingView: View {
 }
 
 #Preview {
-    DessertsLoadingView(dataSource: MockDessertsDataSource(), dessertInfoDataSource: MockDessertInfoDataSource())
+    DessertListLoadingView(dataSource: MockDessertsDataSource(), dessertInfoDataSource: MockDessertInfoDataSource())
 }

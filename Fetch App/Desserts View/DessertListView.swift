@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct DessertsView: View {
-    @StateObject var viewModel: DessertsViewModel
+struct DessertListView: View {
+    @StateObject var viewModel: DessertListViewModel
     let dessertInfoDataSource: DessertInfoDataSource
     
     var body: some View {
@@ -34,5 +34,5 @@ struct DessertsView: View {
 }
 
 #Preview {
-    DessertsView(viewModel: .init(desserts: .init(meals: []), dataSource: MockDessertsDataSource()), dessertInfoDataSource: MockDessertInfoDataSource())
+    DessertListView(viewModel: .init(desserts: .init(meals: []), dataSource: MockDessertsDataSource()), dessertInfoDataSource: MockDessertInfoDataSource())
 }
